@@ -1,7 +1,5 @@
 # Deep-Racer-League-Workshop
 
-[![Documentation Status](https://deep-racer-league-workshop.readthedocs.io/en/latest/?badge=latest)](https://deep-racer-league-workshop.readthedocs.io/en/latest/?badge=latest)
-
 Esse repositório tem o intuito de entregar um workshop básico e inicial sobre Reinforcement Learning e AWS Deep Racer
 
 <p align="center"> 
