@@ -1,0 +1,11 @@
+# VSCode
+.vscode
+
+# MAC
+.DS_Store
+
+# Python
+venv/
+
+# Docs
+_build/
