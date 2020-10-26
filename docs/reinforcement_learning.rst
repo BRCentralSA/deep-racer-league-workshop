@@ -2,7 +2,7 @@
 Entendendo Reinforcement Learning
 ************************************************
 
-Nesta etapa do Workshop entenderemos o que é Reinforcement Learning e como ele é aplicado no DeepRacer
+Nesta etapa do Workshop entenderemos o que é Reinforcement Learning e como ele é aplicado no AWS DeepRacer
 
 O que é Reinforcement Learning?
 -----------------------------------------
