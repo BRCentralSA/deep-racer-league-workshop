@@ -34,4 +34,5 @@ Pronto! Agora que já temos uma conta AWS disponível podemos prosseguir com o w
    :maxdepth: 2
 
    reinforcement_learning
+   deep_racer_model
 
