@@ -217,3 +217,4 @@ Nesse exemplo nós medimos o quão distante o carro está do centro da pista, da
    :maxdepth: 2
 
    deep_racer_model
+   evaluate_model

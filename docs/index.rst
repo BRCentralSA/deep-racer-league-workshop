@@ -35,4 +35,5 @@ Pronto! Agora que já temos uma conta AWS disponível podemos prosseguir com o w
 
    reinforcement_learning
    deep_racer_model
+   evaluate_model
 
