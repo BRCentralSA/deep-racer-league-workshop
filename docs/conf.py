@@ -58,3 +58,5 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 html_favicon = "_static/deep_racer.ico"
+
+html_logo = "_static/deep_racer_league.png"
