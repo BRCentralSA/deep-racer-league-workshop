@@ -119,10 +119,3 @@ O processo de inicialização leva cerca de seis minutos para alterar o status d
 O trabalho de treinamento está sendo executado na Nuvem AWS, portanto, você não precisa manter o console do AWS DeepRacer aberto durante o treinamento. No entanto, você pode voltar ao console para verificar seu modelo a qualquer momento enquanto o trabalho estiver em andamento.
 
 .. image:: _static/quick_start/console10.png
-
-
-.. toctree::
-   :caption: Etapas do Workshop:
-   :maxdepth: 2
-   
-   evaluate_model

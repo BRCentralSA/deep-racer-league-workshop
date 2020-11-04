@@ -211,10 +211,3 @@ Nesse exemplo nós medimos o quão distante o carro está do centro da pista, da
         return float(reward)
 
 .. note:: Parabéns, você chegou ao final deste módulo e um pouco melhor sobre, Reinforcement Learning, Deep Racer e suas funções de recompensa, vá para o próximo módulo para aprender a criar e treinar seu primeiro modelo.
-
-.. toctree::
-   :caption: Etapas do Workshop:
-   :maxdepth: 2
-
-   deep_racer_model
-   evaluate_model

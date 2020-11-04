@@ -31,7 +31,6 @@ Pronto! Agora que já temos uma conta AWS disponível podemos prosseguir com o w
 
 .. toctree::
    :caption: Etapas do Workshop:
-   :maxdepth: 2
 
    reinforcement_learning
    deep_racer_model
