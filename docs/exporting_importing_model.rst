@@ -61,5 +61,105 @@ Após finalizdo o seu modelo já estará em sua máquina local e você pode re-i
 Importando Seu Modelo
 ---------------------- 
 
+O procedimento abaixo leva em conta que você possua o **aws-cli** devidamente instalado e configurado em seu computador.
+
+Vamos considerar para este exercício, que você tenha a estrutura de seu modelo em sua máquina. O que será algo semelhante a imagem abaixo:
+
+.. image:: _static/import_export/import_terminal_01.png
+
+Em seu terminal, vá então para o diretório onde está a estrutura de modelo que você pretende importar.
+
+Exemplo de comando abaixo (substitua <caminho>/<modelo_exportado>, pelo caminho correto em sua máquina):
+
+.. code-block:: console
+cd /<caminho>/<modelo_exportado>
+
+Aqui um exemplo de como seria uma execução deste:
+
+.. image:: _static/import_export/import_terminal_02.png
+
+Vamos então criar um novo bucket, o qual irá abrigar esta estrutura deste modelo.
+
+Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
+
+.. code-block:: console
+aws s3 mb s3://<nome_do_bucket> --region us-east-1
+
+Aqui um exemplo de como seria uma execução deste:
+
+.. image:: _static/import_export/import_terminal_03.png
+
+Como estando no diretório onde está a estrutura do modelo que desejamos importar, vamos efetuar uma cópia recursiva de toda esta estrutura para dentro do bucket recém criado.
+
+Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
+
+.. code-block:: console
+aws s3 cp . s3://<nome_do_bucket> --recursive
+
+Aqui um exemplo de como seria uma execução deste comando:
+
+.. image:: _static/import_export/import_terminal_04.png
+
+Após realizar o upload da estrutura do modelo para o bucket, precisamos autorizar que o Deepracer tenha acesso ao bucket, criando para isso uma "bucket policy".
+
+Para isso vá até o AWS Console, acesse seu bucket e faça a inclusão da "bucket policy".
+
+Abaixo um exemplo:
+
+.. image:: _static/import_export/import_console_s3_01.png
+
+.. image:: _static/import_export/import_console_s3_02.png
+
+.. image:: _static/import_export/import_console_s3_03.png
+
+Aqui está um exemplo de como seria esta bucket policy (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
+
+.. code-block:: json
+{
+    "Version": "2012-10-17",
+    "Id": "AwsDeepracerServiceAccess",
+    "Statement": [
+        {
+            "Sid": "Stmt1606495468739",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "deepracer.amazonaws.com"
+            },
+            "Action": [
+                "s3:GetObjectAcl",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<nome_do_bucket>",
+                "arn:aws:s3:::<nome_do_bucket>/*"
+            ]
+        }
+    ]
+}
+
+Vá então para o serviço AWSc Deepracer, entre em "Your models", e escolha "Import model".
+
+.. image:: _static/import_export/import_console_deepracer_01.png
+
+Na tela onde passamos as informações para a importação necessitaremos indicar os seguintes dados:
+
+"Sepecific S3 bucket", onde indicamos: "s3://<nome_do_bucket>/<prefix>". Este caminho indicará ao Deepracer em qual o diretório base ele encontrará as informações do modelo a ser importado.
+"Model name", onde você indica qual nome dará a seu modelo importado.
+
+Considerando os exemplo utilizados acima, aqui está um exemplo de como ficaria:
+
+.. image:: _static/import_export/import_console_deepracer_02.png
+
+O próximo passo será aguardar que a importação aconteça.
+
+.. image:: _static/import_export/import_console_deepracer_03.png
+
+Após alguns minutos, teremos nosso modelo importado.
+
+.. image:: _static/import_export/import_console_deepracer_04.png
+
+
 Exportando Seu Modelo Físico
 -----------------------------
