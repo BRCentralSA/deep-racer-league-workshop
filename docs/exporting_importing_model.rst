@@ -72,6 +72,7 @@ Em seu terminal, vá então para o diretório onde está a estrutura de modelo q
 Exemplo de comando abaixo (substitua <caminho>/<modelo_exportado>, pelo caminho correto em sua máquina):
 
 .. code-block:: console
+
 cd /<caminho>/<modelo_exportado>
 
 Aqui um exemplo de como seria uma execução deste:
@@ -83,6 +84,7 @@ Vamos então criar um novo bucket, o qual irá abrigar esta estrutura deste mode
 Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
 .. code-block:: console
+
 aws s3 mb s3://<nome_do_bucket> --region us-east-1
 
 Aqui um exemplo de como seria uma execução deste:
@@ -94,6 +96,7 @@ Como estando no diretório onde está a estrutura do modelo que desejamos import
 Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
 .. code-block:: console
+
 aws s3 cp . s3://<nome_do_bucket> --recursive
 
 Aqui um exemplo de como seria uma execução deste comando:
@@ -115,6 +118,7 @@ Abaixo um exemplo:
 Aqui está um exemplo de como seria esta bucket policy (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
 .. code-block:: json
+
 {
     "Version": "2012-10-17",
     "Id": "AwsDeepracerServiceAccess",
@@ -139,13 +143,15 @@ Aqui está um exemplo de como seria esta bucket policy (substitua o <nome_do_buc
     ]
 }
 
-Vá então para o serviço AWSc Deepracer, entre em "Your models", e escolha "Import model".
+Vá então para o serviço AWS Deepracer, clique em "Your models", e depois clique em "Import model".
 
 .. image:: _static/import_export/import_console_deepracer_01.png
 
 Na tela onde passamos as informações para a importação necessitaremos indicar os seguintes dados:
 
-"Sepecific S3 bucket", onde indicamos: "s3://<nome_do_bucket>/<prefix>". Este caminho indicará ao Deepracer em qual o diretório base ele encontrará as informações do modelo a ser importado.
+"Sepecific S3 bucket", onde indicamos: "s3://<nome_do_bucket>/<prefix>". 
+Este caminho indicará ao Deepracer em qual o diretório base ele encontrará as informações do modelo a ser importado.
+
 "Model name", onde você indica qual nome dará a seu modelo importado.
 
 Considerando os exemplo utilizados acima, aqui está um exemplo de como ficaria:
