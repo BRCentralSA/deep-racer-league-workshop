@@ -83,7 +83,7 @@ Vamos então criar um novo bucket, o qual irá abrigar esta estrutura deste mode
 
 Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
-.. code-block:: none
+.. code-block:: console
 
    aws s3 mb s3://<nome_do_bucket> --region us-east-1
 
@@ -95,7 +95,7 @@ Como estando no diretório onde está a estrutura do modelo que desejamos import
 
 Exemplo de comando abaixo (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
-.. code-block:: none
+.. code-block:: console
 
    aws s3 cp . s3://<nome_do_bucket> --recursive
 
@@ -117,7 +117,7 @@ Abaixo um exemplo:
 
 Aqui está um exemplo de como seria esta bucket policy (substitua o <nome_do_bucket>, pelo nome que você escolheu para seu bucket):
 
-.. code-block:: none
+.. code-block:: json
 
    {
        "Version": "2012-10-17",
