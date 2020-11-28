@@ -48,11 +48,17 @@ Crie uma pasta para fazer download dos seus modelos
 
 Siga os passos abaixo
 
-**mkdir meu_modelo_exportado**
+.. code-block:: console
 
-**cd meu_modelo_exportado**
+   mkdir meu_modelo_exportado
 
-**aws s3 cp -r aws s3 cp --recursive s3://aws-deepracer-xxxxx-xxxxx-xxxxx/exportando_modelo/ ./**
+.. code-block:: console
+
+   cd meu_modelo_exportado
+
+.. code-block:: console
+
+   aws s3 cp -r aws s3 cp --recursive s3://aws-deepracer-xxxxx-xxxxx-xxxxx/exportando_modelo/ ./
 
 .. image:: _static/import_export/terminal01.png
 
