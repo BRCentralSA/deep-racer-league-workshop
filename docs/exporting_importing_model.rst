@@ -175,3 +175,11 @@ Após alguns minutos, teremos nosso modelo importado.
 
 Exportando Seu Modelo Físico
 -----------------------------
+
+Para exportar seu modelo fisico, basta seguir os passos descritos na imagem abaixo. O que irá baixar um arquivo no formato "tar.gz".
+
+.. image:: _static/import_export/import_console_deepracer_05.png
+
+OBS: Modelos recém importados, não trarão esta opção para você (como mostrado na imagem abaixo). Neste caso, basta que você efetue um clone de seu modelo recém importado, efetue o treinamento deste novo modelo clonado, e você terá como baixar o modelo físico deste novo modelo, clonado e treinado.
+
+.. image:: _static/import_export/import_console_deepracer_06.png
